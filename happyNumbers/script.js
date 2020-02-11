@@ -1,5 +1,4 @@
 function happy(n) {
-  debugger;
   while (n > 10) {
     const arrayOfStringNums = n.toString().split('')
     const numberArray = arrayOfStringNums.map(Number)
