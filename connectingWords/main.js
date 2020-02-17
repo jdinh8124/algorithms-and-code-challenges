@@ -46,5 +46,3 @@ function join(arr) {
   arrayToReturn.push(stringToPush, numToReturn);
   return arrayToReturn;
 }
-
-console.log(join(["abcde", "bcdefghi", "efghi", "fghij", "ghijklmnop"]))
