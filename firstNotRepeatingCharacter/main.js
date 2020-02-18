@@ -1,20 +1,12 @@
 function firstNotRepeatingCharacter(s) {
-  let found = false;
   for (let i = 0; i < s.length; i++) {
-    found = false;
-    for (let k = 0; k < s.length; k++) {
-      if (s[i] === s[k]) {
-        if(i !== k){
-          found = true;
-        }
-      }
-    }
-    if (!found) {
-      return s[i]
+    let firstHalf = s.slice(0, i);
+    let secondHalf = s.slice(i + 1);
+    let removed = firstHalf + secondHalf;
+    if (!removed.includes(s[i])) {
+      return s[i];
     }
 
   }
   return '_'
 }
-
-console.log(firstNotRepeatingCharacter("abacabaabacaba"))
