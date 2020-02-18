@@ -5,32 +5,32 @@ function sudoku2(grid) {
   let index = 0;
   for (let i = 0; i < 81; i++) {
     if (parseInt(grid[arrNum][index])) {
-      if (grid[arrNum][index] === grid[0][index] && arrNum ==! 0) {
-            found = true;
-          }
-      else if (grid[arrNum][index] === grid[1][index] && arrNum ==! 1){
-              found = true;
-      } else if (grid[arrNum][index] === grid[2][index] && arrNum ==! 2){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[3][index] && arrNum ==! 3){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[4][index] && arrNum ==! 4){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[5][index] && arrNum ==! 5){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[6][index] && arrNum ==! 6){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[7][index] && arrNum == !7){
-              found = true;
-        }
-        else if (grid[arrNum][index] === grid[8][index] && arrNum == !8){
-              found = true;
-        }
+      if (grid[arrNum][index] === grid[0][index] && arrNum == !0) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[1][index] && arrNum !== 1) {
+        found = true;
+      } else if (grid[arrNum][index] === grid[2][index] && arrNum !== 2) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[3][index] && arrNum !== 3) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[4][index] && arrNum !== 4) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[5][index] && arrNum !== 5) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[6][index] && arrNum !== 6) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[7][index] && arrNum !== 7) {
+        found = true;
+      }
+      else if (grid[arrNum][index] === grid[8][index] && arrNum !== 8) {
+        found = true;
+      }
     }
 
     if (index === 8) {
@@ -61,6 +61,43 @@ function sudoku2(grid) {
   }
 
 
+  let newArrayLoop = 0;
+  let lastNewIndex = 0;
+  let newObjToCheck1 = {};
+  let newObjToCheck2 = {};
+  let newObjToCheck3 = {};
+
+
+  for (let i = 0; i <= 81; i++) {
+    debugger;
+    if (newObjToCheck1.hasOwnProperty(grid[newArrayLoop][lastNewIndex]) || newObjToCheck2.hasOwnProperty(grid[newArrayLoop][lastNewIndex]) || newObjToCheck3.hasOwnProperty(grid[newArrayLoop][lastNewIndex])) {
+      return false;
+    }
+    if (parseInt(grid[newArrayLoop][lastNewIndex])) {
+      if (lastNewIndex < 3) {
+        newObjToCheck1[grid[newArrayLoop][lastNewIndex]] = grid[newArrayLoop][lastNewIndex]
+      } else if (lastNewIndex >= 3 && lastNewIndex < 6) {
+        newObjToCheck2[grid[newArrayLoop][lastNewIndex]] = grid[newArrayLoop][lastNewIndex]
+      } else {
+        newObjToCheck3[grid[newArrayLoop][lastNewIndex]] = grid[newArrayLoop][lastNewIndex]
+      }
+    }
+    if (lastNewIndex === 8) {
+      lastNewIndex = 0;
+      newArrayLoop++;
+    } else {
+      lastNewIndex++
+    }
+    if (i === 26 || i === 52) {
+      newObjToCheck1 = {};
+      newObjToCheck2 = {};
+      newObjToCheck3 = {};
+    }
+  }
+
+
+
+
   if (found) {
     return false;
   } else {
@@ -68,12 +105,12 @@ function sudoku2(grid) {
   }
 }
 console.log(sudoku2(
-[["1", ".", "4", ".", ".", ".", "6", "3", "."],
-["1", ".", ".", ".", ".", ".", ".", ".", "."],
-["5", ".", ".", ".", ".", ".", ".", "9", "."],
-[".", ".", ".", "5", "6", ".", ".", ".", "."],
-["4", ".", "3", ".", ".", ".", ".", ".", "1"],
-[".", ".", ".", "7", ".", ".", ".", ".", "."],
-[".", ".", ".", "5", ".", ".", ".", ".", "."],
-[".", ".", ".", ".", ".", ".", ".", ".", "."],
-[".", ".", ".", ".", ".", ".", ".", ".", "."]]))
+  [[".", "4", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", "4", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", "1", ".", ".", "7", ".", "."],
+    [".", ".", ".", ".", ".", ".", ".", ".", "."],
+    [".", ".", ".", "3", ".", ".", ".", "6", "."],
+    [".", ".", ".", ".", ".", "6", ".", "9", "."],
+    [".", ".", ".", ".", "1", ".", ".", ".", "."],
+    [".", ".", ".", ".", ".", ".", "2", ".", "."],
+    [".", ".", ".", "8", ".", ".", ".", ".", "."]]))
