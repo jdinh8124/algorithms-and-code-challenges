@@ -5,54 +5,32 @@ function sudoku2(grid) {
   let index = 0;
   for (let i = 0; i < 81; i++) {
     if (parseInt(grid[arrNum][index])) {
-      debugger;
-      switch (grid[arrNum][index]) {
-        case (grid[arrNum][index] === grid[0][index]):
-          if (arrNum == !0) {
+      if (grid[arrNum][index] === grid[0][index] && arrNum ==! 0) {
             found = true;
           }
-          break;
-        case (grid[arrNum][index] === grid[1][index]):
-          if (arrNum == !1) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[2][index]):
-          if (arrNum == !2) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[3][index]):
-          if (arrNum == !3) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[4][index]):
-          if (arrNum == !4) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[5][index]):
-          if (arrNum == !5) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[6][index]):
-          if (arrNum == !6) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[7][index]):
-          if (arrNum == !7) {
-            found = true;
-          }
-          break;
-        case (grid[arrNum][index] === grid[8][index]):
-          if (arrNum == !8) {
-            found = true;
-          }
-          break;
-      }
+      else if (grid[arrNum][index] === grid[1][index] && arrNum ==! 1){
+              found = true;
+      } else if (grid[arrNum][index] === grid[2][index] && arrNum ==! 2){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[3][index] && arrNum ==! 3){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[4][index] && arrNum ==! 4){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[5][index] && arrNum ==! 5){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[6][index] && arrNum ==! 6){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[7][index] && arrNum == !7){
+              found = true;
+        }
+        else if (grid[arrNum][index] === grid[8][index] && arrNum == !8){
+              found = true;
+        }
     }
 
     if (index === 8) {
@@ -90,8 +68,8 @@ function sudoku2(grid) {
   }
 }
 console.log(sudoku2(
-[[".", ".", "4", ".", ".", ".", "6", "3", "."],
-[".", ".", ".", ".", ".", ".", ".", ".", "."],
+[["1", ".", "4", ".", ".", ".", "6", "3", "."],
+["1", ".", ".", ".", ".", ".", ".", ".", "."],
 ["5", ".", ".", ".", ".", ".", ".", "9", "."],
 [".", ".", ".", "5", "6", ".", ".", ".", "."],
 ["4", ".", "3", ".", ".", ".", ".", ".", "1"],
