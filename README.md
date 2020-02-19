@@ -11,7 +11,7 @@
 - Arrays
 - Strings
 
-## Interview Questions From: 
+## Interview Questions From:
 - Adobe
 - Facebook
 - Amazon
@@ -19,3 +19,6 @@
 - Apple
 - Uber
 - Palanti Technologies
+
+
+![CodeSignal Sources](capture.png)
