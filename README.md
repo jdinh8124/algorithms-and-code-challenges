@@ -6,3 +6,16 @@
 ## Sites Used:
 - Edabit
 - CodeSignal Interview Questions
+
+## Interview Question Types
+- Arrays
+- Strings
+
+## Interview Questions From: 
+- Adobe
+- Facebook
+- Amazon
+- Windows
+- Apple
+- Uber
+- Palanti Technologies
