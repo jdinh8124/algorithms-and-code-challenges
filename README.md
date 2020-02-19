@@ -21,4 +21,4 @@
 - Palanti Technologies
 
 
-![CodeSignal Sources](capture.png)
+![CodeSignal Sources](./capture.png)
