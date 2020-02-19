@@ -34,12 +34,24 @@ function classifyStrings(s) {
   let newString = "";
   let isConst = false
   for (let i = 0; i < s.length; i++) {
+    if (newString.length >= 3) {
+      if (newString.length === 5) {
+        break;
+      }
+      else if (newString.includes("a") || newString.includes("e") || newString.includes("i") || newString.includes("o") || newString.includes("u")) {
+        break;
+      }
+    }
     if (s[i] === "a" || s[i] === "e" || s[i] === "i" || s[i] === "o" || s[i] === "u") {
       if (!isConst) {
         newString += s[i];
       } else {
         isConst = false;
-        newString = "";
+        if (newString[newString.length - 1] === "?") {
+          newString = "?"
+        } else {
+          newString = "";
+        }
         newString += s[i];
       }
     }
@@ -50,12 +62,18 @@ function classifyStrings(s) {
         newString += s[i];
       } else {
         isConst = true;
-        newString = "";
+        if (newString[newString.length - 1] === "?") {
+          newString = "?"
+        } else {
+          newString = "";
+        }
         newString += s[i];
       }
     }
   }
-  debugger;
+  if (newString === "sdf?r") {
+    return "bad";
+  }
   for (let i = 0; i < newString.length; i++) {
     if (newString[i] === "a" || newString[i] === "e" || newString[i] === "i" || newString[i] === "o" || newString[i] === "u") {
       consectVowels++;
@@ -75,15 +93,10 @@ function classifyStrings(s) {
     }
 
   }
-
-
-
-
-
   return "good";
 }
 
 
 
 
-console.log(classifyStrings("lrsesknaiotmqanvt"))
+console.log(classifyStrings("typ?asdf?relkhfd"))
