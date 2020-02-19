@@ -1,5 +1,4 @@
 function strstr(s, x) {
-  debugger;
   for (let i = 0; i < s.length; i++) {
     if (s[i] === x[0]) {
       let newSlice = s.slice(i, (i + s.length));
