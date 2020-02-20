@@ -1,5 +1,6 @@
 //
 function removeKFromList(l, k) {
+  debugger;
   if (l.length < 1) {
     return l;
   }
