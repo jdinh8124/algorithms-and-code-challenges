@@ -3,13 +3,22 @@ function ascending(str) {
   let ascending = false;
 
   const splitArr = str.split("");
-  debugger;
   const nums = splitArr.map(nums => parseInt(nums));
   const newArrJoined = [];
   let stringToPush = "";
+  debugger;
+
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === 0|| nums[i] > nums[i - 1] || typeof nums[i-1] === "undefined") {
-      stringToPush += nums[i];
+    if (nums[i] === 0 || typeof nums[i - 1] === "undefined" || typeof newArrJoined[0] === "undefined" || newArrJoined[0].length !== stringToPush.length) {
+      if (typeof nums[i - 1] === "undefined" || typeof newArrJoined[0] === "undefined" || newArrJoined[0].length > 0 ){
+        if ( typeof newArrJoined[0] === "undefined" ||newArrJoined[0].length !== stringToPush.length){
+        stringToPush += nums[i];
+      }else{
+          newArrJoined.push(stringToPush);
+          stringToPush = "";
+          stringToPush += nums[i];
+      }
+    }
     } else if(stringToPush.length > 0) {
       newArrJoined.push(stringToPush);
       stringToPush = "";
