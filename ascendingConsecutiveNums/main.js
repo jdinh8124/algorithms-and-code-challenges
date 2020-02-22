@@ -9,7 +9,7 @@ function ascending(str) {
   debugger;
 
   for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === 0 || typeof nums[i - 1] === "undefined" || typeof newArrJoined[0] === "undefined" || newArrJoined[0].length !== stringToPush.length) {
+    if (nums[i] === 0 || stringToPush === "" || typeof nums[i - 1] === "undefined" || newArrJoined[0].length !== stringToPush.length) {
       if (typeof nums[i - 1] === "undefined" || typeof newArrJoined[0] === "undefined" || newArrJoined[0].length > 0 ){
         if ( typeof newArrJoined[0] === "undefined" ||newArrJoined[0].length !== stringToPush.length){
         stringToPush += nums[i];
