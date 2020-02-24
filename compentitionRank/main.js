@@ -1,36 +1,41 @@
 function competitionRank(results, person) {
-debugger;
   const arrToCompare = [];
   const arrOfFinish = [];
   for(const key in results){
     arrToCompare.push([results[key], key])
   }
+  debugger;
   arrToCompare.sort((a,b) => b[0] - a[0] )
-  console.log(arrToCompare)
-
   let num = 1;
+  let notFirst = 1;
   for(let i = 0; i < arrToCompare.length; i++){
   if(i === 0){
     arrOfFinish.push(num);
-    return;
-  }
-  if(arrToCompare[i][0] === arrToCompare[0][0]){
+  }else if(arrToCompare[i][0] === arrToCompare[0][0]){
     arrOfFinish.push(num);
-    return;
+    notFirst++;
   }
-
-    if (arrToCompare[i][0] === arrToCompare[i+1][0]){
-      let duplicate = 0;
+    else if (typeof arrToCompare[i+1] !== "undefined" && arrToCompare[i][0] === arrToCompare[i+1][0]){
+      let duplicate = 1;
       for (let w = i + 1; w < (arrToCompare.length - i); w++){
         if (arrToCompare[i][0] === arrToCompare[w][0]){
-
+          duplicate++;
         }
       }
+      i+= duplicate;
+      notFirst+= duplicate;
+      for(let m = 0; m < duplicate; m++){
+        arrOfFinish.push(notFirst)
+      }
     }  else{
-    num++;
-    arrOfFinish.push(num);
+    notFirst++;
+    arrOfFinish.push(notFirst);
   }
 }
+  let foundNum = arrToCompare.findIndex(item => item[1] === person);
+  let finishOfPerson = arrOfFinish[foundNum];
+
+  return finishOfPerson;
 }
 
-console.log(competitionRank(competitionRank({ Aria: 90, Brooke: 90, Olivia: 90, Eve: 74, Ellie: 87 }, "Ellie"), 4))
+console.log(competitionRank({ Harry: 81, Elsie: 81, Grayson: 84, John: 84, Alex: 81 }, "Elsie"))
