@@ -13,7 +13,12 @@ function competitionRank(results, person) {
     arrOfFinish.push(num);
   }else if(arrToCompare[i][0] === arrToCompare[0][0]){
     arrOfFinish.push(num);
-    notFirst++;
+    if(i === 1){
+      notFirst = 3;
+    }else{
+      notFirst++;
+
+    }
   }
     else if (typeof arrToCompare[i+1] !== "undefined" && arrToCompare[i][0] === arrToCompare[i+1][0]){
       let duplicate = 1;
@@ -25,13 +30,14 @@ function competitionRank(results, person) {
         }
       }
       i+= duplicate -1;
-      notFirst+= duplicate - 1;
       for(let m = 0; m < duplicate - 1; m++){
         arrOfFinish.push(notFirst)
       }
+    notFirst += duplicate - 1;
+
     }  else{
-    notFirst++;
     arrOfFinish.push(notFirst);
+    notFirst++;
   }
 }
   let foundNum = arrToCompare.findIndex(item => item[1] === person);
@@ -40,4 +46,4 @@ function competitionRank(results, person) {
   return finishOfPerson;
 }
 
-console.log(competitionRank({ Violet: 99, Finn: 100, Eden: 99, Frankie: 98, Rory: 98 }, "Frankie"))
+console.log(competitionRank({ Aria: 90, Brooke: 90, Olivia: 90, Eve: 74, Ellie: 87 }, "Ellie"), 3)
