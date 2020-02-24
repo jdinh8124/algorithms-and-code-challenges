@@ -18,14 +18,15 @@ function competitionRank(results, person) {
     else if (typeof arrToCompare[i+1] !== "undefined" && arrToCompare[i][0] === arrToCompare[i+1][0]){
       let duplicate = 1;
     let firstDuplicate = arrToCompare[i][0];
-      for (let w = i + 1; w <= (arrToCompare.length - i); w++){
+    let start = i;
+      for (let w = start; w < arrToCompare.length; w++){
         if (firstDuplicate === arrToCompare[w][0]){
           duplicate++;
         }
       }
       i+= duplicate -1;
-      notFirst++;
-      for(let m = 0; m < duplicate; m++){
+      notFirst+= duplicate - 1;
+      for(let m = 0; m < duplicate - 1; m++){
         arrOfFinish.push(notFirst)
       }
     }  else{
@@ -39,4 +40,4 @@ function competitionRank(results, person) {
   return finishOfPerson;
 }
 
-console.log(competitionRank({ Ben: 78, Quinn: 84, Lena: 84, Isla: 92, Kayla: 72 }, "Ben"))
+console.log(competitionRank({ Violet: 99, Finn: 100, Eden: 99, Frankie: 98, Rory: 98 }, "Frankie"))
