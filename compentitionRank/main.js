@@ -17,13 +17,14 @@ function competitionRank(results, person) {
   }
     else if (typeof arrToCompare[i+1] !== "undefined" && arrToCompare[i][0] === arrToCompare[i+1][0]){
       let duplicate = 1;
-      for (let w = i + 1; w < (arrToCompare.length - i); w++){
-        if (arrToCompare[i][0] === arrToCompare[w][0]){
+    let firstDuplicate = arrToCompare[i][0];
+      for (let w = i + 1; w <= (arrToCompare.length - i); w++){
+        if (firstDuplicate === arrToCompare[w][0]){
           duplicate++;
         }
       }
-      i+= duplicate;
-      notFirst+= duplicate;
+      i+= duplicate -1;
+      notFirst++;
       for(let m = 0; m < duplicate; m++){
         arrOfFinish.push(notFirst)
       }
@@ -38,4 +39,4 @@ function competitionRank(results, person) {
   return finishOfPerson;
 }
 
-console.log(competitionRank({ Harry: 81, Elsie: 81, Grayson: 84, John: 84, Alex: 81 }, "Elsie"))
+console.log(competitionRank({ Ben: 78, Quinn: 84, Lena: 84, Isla: 92, Kayla: 72 }, "Ben"))
