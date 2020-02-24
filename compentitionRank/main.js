@@ -39,4 +39,5 @@ function competitionRank(results, person) {
 
   return finishOfPerson;
 }
+
 console.log(competitionRank({ Harry: 81, Elsie: 81, Grayson: 84, John: 84, Alex: 81 }, "Elsie"))
