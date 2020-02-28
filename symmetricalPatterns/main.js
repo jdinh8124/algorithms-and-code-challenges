@@ -32,9 +32,11 @@ debugger;
     return "imperfect";
   }
 
-if(pattern[0][1] === pattern[1][0]){
-  return "perfect";
-}
+  if (pattern[0][1] === pattern[1][0] && !notVertSym && !notHoriz){
+    return "perfect";
+
+  }
+
 }
 
 
