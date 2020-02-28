@@ -3,10 +3,10 @@ function classifyRug(pattern) {
   let notHoriz = false;
   let notVertSym = false;
   // let notPerf = false;
+debugger;
 
-
-  for(let i = 0; i < pattern[i].length ;i++){
-    for(let w = 0; w < pattern.length ; w++){
+  for(let i = 0; i < pattern.length ;i++){
+    for(let w = 0; w < pattern[0].length ; w++){
       if(pattern[i][w] !== pattern[i][0]){
         notHoriz = true;
       }
@@ -36,3 +36,9 @@ if(pattern[0][1] === pattern[1][0]){
   return "perfect";
 }
 }
+
+
+console.log(classifyRug([
+  ['a', 'a', 'b'],
+  ['a', 'a', 'b']
+]))
