@@ -1,5 +1,4 @@
 function nextNumber(num) {
-  const arrAllOpt = [];
   let numberStringed = num.toString();
   function getAllPermutations(string) {
     var results = [];
@@ -23,12 +22,14 @@ function nextNumber(num) {
   const numberedArr = combos.map(Number);
   numberedArr.sort();
   let found = numberedArr.findIndex(item => item === num);
-  debugger;
   if(found === numberedArr.length - 1){
     return num;
   }else{
     if (numberedArr[found + 1] === num){
-      return numberedArr[found + 2]
+     const newArr = numberedArr.slice(found);
+     let foundAgain = newArr.findIndex(item => item !== numberedArr[found]);
+    let foundIndex = foundAgain + found;
+    return numberedArr[foundIndex]
     }else{
       return numberedArr[found + 1];
     }
@@ -36,20 +37,3 @@ function nextNumber(num) {
 }
 
 console.log(nextNumber(1115))
-
-
-
-
-
-// if (num.length === 2) {
-//   let numberStringed = num.toString();
-//   const arrayOfNums = numberStringed.split("")
-//   const numberedArr = arrayOfNums.map(Number);
-//   numberedArr.sort();
-
-//   let numString = ""
-//   for (let i = numberedArr.length - 1; i > 0; i--) {
-//     numString += numberedArr[i];
-//   }
-//   return parseInt(numString);
-// }
