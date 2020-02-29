@@ -1,28 +1,41 @@
 function nextNumber(num) {
   const arrAllOpt = [];
   let numberStringed = num.toString();
-  const numberedArr = numberStringed.split("")
-  for(let i = 0; i < numberedArr.length; i++ ){
-    let numToPush = numberedArr[i];
-    for(let w = 0; w < numberedArr.length; w++){
-      if(w !== i){
-        numToPush += numberedArr[w];
+  function getAllPermutations(string) {
+    var results = [];
+
+    if (string.length === 1) {
+      results.push(string);
+      return results;
+    }
+
+    for (var i = 0; i < string.length; i++) {
+      var firstChar = string[i];
+      var charsLeft = string.substring(0, i) + string.substring(i + 1);
+      var innerPermutations = getAllPermutations(charsLeft);
+      for (var j = 0; j < innerPermutations.length; j++) {
+        results.push(firstChar + innerPermutations[j]);
       }
     }
-    arrAllOpt.push(numToPush);
+    return results;
   }
+  let combos = getAllPermutations(numberStringed);
+  const numberedArr = combos.map(Number);
+  numberedArr.sort();
+  let found = numberedArr.findIndex(item => item === num);
   debugger;
-  //   const numberedArr = arrayOfNums.map(Number);
-  arrAllOpt.sort();
-  let found = arrAllOpt.indexOf(item => item === num);
-  if(found === arrAllOpt.length - 1){
+  if(found === numberedArr.length - 1){
     return num;
   }else{
-    return arrAllOpt[found + 1];
+    if (numberedArr[found + 1] === num){
+      return numberedArr[found + 2]
+    }else{
+      return numberedArr[found + 1];
+    }
   }
 }
 
-console.log(nextNumber(899))
+console.log(nextNumber(1115))
 
 
 
