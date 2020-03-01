@@ -19,29 +19,35 @@ for (let i = 0; i < arr[0].length; i++) {
     }
   }
 }
-  debugger;
-  let same = true;
+let same = true;
   for (let i = 0; i < arr.length - 1; i++) {
+    let indexToCompare = 1;
     for (let w = i + 1; w < arr[0].length; w++) {
-      if (arr[i][0] !== arr[w][w]) {
+      if (arr[i][0] !== arr[w][indexToCompare]) {
           same = false;
       }
+      indexToCompare++
     }
   }
   if (same) {
     leftDig = true;
   }
-  for (let i = arr[0].length - 1; i > 0; i--) {
-    let numCheck = 0;
-    for (let w = i -1 ; w > 0; w--) {
-      if (arr[0][i] === arr[w][w]) {
-        numCheck++
-      }
-    }
-    if (numCheck >= 2) {
-      rightDig = true;
-    }
 
+debugger;
+  let sameRight = true;
+  for (let i = 0; i < arr.length - 1; i++) {
+    let indexToCompare = arr[0].length - 2;
+    let startNextRow = i + 1;
+    for (let w = arr[0].length -1 ; w > 0; w--) {
+      if (arr[i][arr[0].length-1] !== arr[startNextRow][indexToCompare]) {
+        sameRight = false;
+      }
+      indexToCompare--;
+      startNextRow++;
+    }
+  }
+  if (sameRight) {
+    rightDig = true;
   }
 
 
@@ -60,7 +66,7 @@ return true;
 
 
 console.log(isWristband(
-[["A", "B", "C"],
-  ["C", "A", "B"],
-  ["B", "C", "A"],
-  ["A", "B", "C"]]))
+  [ ["A", "B", "C"],
+    ["B", "C", "A"],
+    ["C", "A", "B"],
+    ["A", "B", "A"]]))
