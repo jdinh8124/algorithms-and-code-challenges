@@ -32,16 +32,16 @@ let same = true;
   if (same) {
     leftDig = true;
   }
-
-debugger;
   let sameRight = true;
   for (let i = 0; i < arr.length - 1; i++) {
     let indexToCompare = arr[0].length - 2;
     let startNextRow = i + 1;
     for (let w = arr[0].length -1 ; w > 0; w--) {
+      if(startNextRow <= arr.length - 1){
       if (arr[i][arr[0].length-1] !== arr[startNextRow][indexToCompare]) {
         sameRight = false;
       }
+    }
       indexToCompare--;
       startNextRow++;
     }
@@ -50,23 +50,11 @@ debugger;
     rightDig = true;
   }
 
-
-
-
-
 if(leftDig || rightDig){
   return true;
 }
-
 if(notHoriz && notVertSym){
   return false;
 }
 return true;
 }
-
-
-console.log(isWristband(
-  [ ["A", "B", "C"],
-    ["B", "C", "A"],
-    ["C", "A", "B"],
-    ["A", "B", "A"]]))
