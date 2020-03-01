@@ -19,7 +19,6 @@ for (let i = 0; i < arr[0].length; i++) {
     }
   }
 }
-  debugger;
   for (let i = 0; i < arr.length; i++) {
     let numCheck = 0;
     for (let w = i + 1; w < arr[0].length; w++) {
@@ -27,10 +26,24 @@ for (let i = 0; i < arr[0].length; i++) {
           numCheck++
       }
     }
-    if(numCheck >= 3){
+    if(numCheck >= 2){
       leftDig = true;
     }
   }
+  debugger;
+  for (let i = arr[0].length - 1; i > 0; i--) {
+    let numCheck = 0;
+    for (let w = i -1 ; w > 0; w--) {
+      if (arr[0][i] === arr[w][w]) {
+        numCheck++
+      }
+    }
+    if (numCheck >= 2) {
+      rightDig = true;
+    }
+  }
+
+
 
 
 
@@ -46,7 +59,7 @@ return true;
 
 
 console.log(isWristband(
-  ["A", "B", "C"],
+[["A", "B", "C"],
   ["C", "A", "B"],
   ["B", "C", "A"],
-  ["A", "B", "C"]))
+  ["A", "B", "C"]]))
