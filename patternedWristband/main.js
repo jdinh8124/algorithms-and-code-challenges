@@ -19,18 +19,18 @@ for (let i = 0; i < arr[0].length; i++) {
     }
   }
 }
-  for (let i = 0; i < arr.length; i++) {
-    let numCheck = 0;
+  debugger;
+  let same = true;
+  for (let i = 0; i < arr.length - 1; i++) {
     for (let w = i + 1; w < arr[0].length; w++) {
-      if (arr[0][i] === arr[w][w]) {
-          numCheck++
+      if (arr[i][0] !== arr[w][w]) {
+          same = false;
       }
     }
-    if(numCheck >= 2){
-      leftDig = true;
-    }
   }
-  debugger;
+  if (same) {
+    leftDig = true;
+  }
   for (let i = arr[0].length - 1; i > 0; i--) {
     let numCheck = 0;
     for (let w = i -1 ; w > 0; w--) {
@@ -41,6 +41,7 @@ for (let i = 0; i < arr[0].length; i++) {
     if (numCheck >= 2) {
       rightDig = true;
     }
+
   }
 
 
