@@ -5,7 +5,10 @@ debugger;
 for(let i = 0; i < s.length; i++){
   let index = stringAlpha.findIndex(item => item === s[i].toLowerCase());
   if(index + k > 26){
-    let numToReturn = index + k - 26;
+    let numToReturn = index + k;
+    while(numToReturn > 26){
+      numToReturn = numToReturn- 26;
+    }
     if(s.charCodeAt(i) < 97){
       stringToReturn += stringAlpha[numToReturn].toUpperCase();
     }else{
