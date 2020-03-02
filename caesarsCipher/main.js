@@ -1,12 +1,25 @@
 function caesarCipher(s, k) {
 let stringAlpha = "abcdefghijklmnopqrstuvwxyz".split("");
 let stringToReturn = '';
-debugger;
 for(let i = 0; i < s.length; i++){
   let index = stringAlpha.findIndex(item => item === s[i].toLowerCase());
-  if(index + k > 26){
+  if (index === -1) {
+    if (s[i] === " ") {
+      stringToReturn += " "
+    } else if (s[i] === ".") {
+      stringToReturn += "."
+    } else if (s[i] === ":") {
+      stringToReturn += ":"
+    } else if (s[i] === ",") {
+      stringToReturn += ","
+    }
+    else {
+      stringToReturn += "-"
+    }
+  }
+  else if(index + k > 26){
     let numToReturn = index + k;
-    while(numToReturn > 26){
+    while(numToReturn >= 26){
       numToReturn = numToReturn- 26;
     }
     if(s.charCodeAt(i) < 97){
@@ -15,15 +28,7 @@ for(let i = 0; i < s.length; i++){
       stringToReturn += stringAlpha[numToReturn]
     }
   }
-  else if (index === -1){
-      if(s[i] === " "){
-        stringToReturn += " "
-      } else if (s[i] === "."){
-        stringToReturn += "."
-      }else{
-        stringToReturn += "-"
-      }
-  }else{
+  else{
     if (s.charCodeAt(i) < 97) {
       stringToReturn += stringAlpha[index + k].toUpperCase();
     } else {
@@ -33,5 +38,3 @@ for(let i = 0; i < s.length; i++){
 }
 return stringToReturn;
 }
-
-console.log(caesarCipher("One should not worry over things that have already happened and that cannot be changed.", 49))
