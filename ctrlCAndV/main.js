@@ -1,0 +1,3 @@
+function keyboardShortcut(str) {
+
+}
