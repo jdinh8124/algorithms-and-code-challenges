@@ -4,6 +4,7 @@ function keyboardShortcut(str) {
   let copied = false;
   let temp = "";
   let toAdd = "";
+  debugger;
   for(let i = 0; i <arrSplit.length; i++){
     if(arrSplit[i] === "Ctrl"){
       temp = arrSplit[i] + arrSplit[i + 1] + arrSplit[i+2];
@@ -11,7 +12,6 @@ function keyboardShortcut(str) {
     if(temp === "Ctrl+C"){
       copied = true;
       let sliced = arrSplit.slice(0,i);
-      debugger;
       arrSplit.splice(i, 3);
       sliced.map(item => {
         toAdd+= item + " "})
@@ -22,7 +22,11 @@ function keyboardShortcut(str) {
       temp = "";
       arrSplit.splice(i, 3);
       i = i - 1;
-    }else{
+    } else if (temp === "Ctrl+V"){
+      arrSplit.splice(i, 3);
+      i = i - 1;
+    }
+    else{
       stringToReturn += arrSplit[i] + " ";
     }
   }
@@ -30,4 +34,4 @@ function keyboardShortcut(str) {
 }
 
 
-console.log(keyboardShortcut("the egg and Ctrl + C Ctrl + V the spoon"))
+console.log(keyboardShortcut("WARNING Ctrl + V Ctrl + C Ctrl + V"))
