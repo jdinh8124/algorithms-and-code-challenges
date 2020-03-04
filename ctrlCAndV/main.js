@@ -12,12 +12,15 @@ function keyboardShortcut(str) {
     if(temp === "Ctrl+C"){
       copied = true;
       let sliced = arrSplit.slice(0,i);
-      arrSplit.splice(i, i+2);
+      arrSplit.splice(i, i);
       sliced.map(item => {
         toAdd+= item + " "})
+      temp = "";
+      i = i - 1;
     } else if (copied && temp === "Ctrl+V"){
       stringToReturn += toAdd;
       stringToReturn += toAdd;
+      temp = "";
     }
   }
   return stringToReturn;
