@@ -1,5 +1,4 @@
 function keyboardShortcut(str) {
-  debugger;
   let stringToReturn = "";
   const arrSplit = str.split(" ");
   let copied = false;
@@ -12,18 +11,22 @@ function keyboardShortcut(str) {
     if(temp === "Ctrl+C"){
       copied = true;
       let sliced = arrSplit.slice(0,i);
-      arrSplit.splice(i, i);
+      debugger;
+      arrSplit.splice(i, 3);
       sliced.map(item => {
         toAdd+= item + " "})
       temp = "";
       i = i - 1;
     } else if (copied && temp === "Ctrl+V"){
       stringToReturn += toAdd;
-      stringToReturn += toAdd;
       temp = "";
+      arrSplit.splice(i, 3);
+      i = i - 1;
+    }else{
+      stringToReturn += arrSplit[i] + " ";
     }
   }
-  return stringToReturn;
+  return stringToReturn.trimEnd();
 }
 
 
