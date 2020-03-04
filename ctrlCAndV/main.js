@@ -11,10 +11,16 @@ function keyboardShortcut(str) {
     }
     if(temp === "Ctrl+C"){
       copied = true;
-      let sliced = arrSplit.slice(0,i);
+     if(!stringToReturn){
+       let sliced = arrSplit.slice(0, i);
+       sliced.map(item => {
+         toAdd += item + " "
+       })
+     } else{
+       toAdd = stringToReturn;
+     }
+
       arrSplit.splice(i, 3);
-      sliced.map(item => {
-        toAdd+= item + " "})
       temp = "";
       i = i - 1;
     } else if (copied && temp === "Ctrl+V"){
@@ -35,4 +41,4 @@ function keyboardShortcut(str) {
 }
 
 
-console.log(keyboardShortcut("You gotta copy something Ctrl + V first my Ctrl + V guy"))
+console.log(keyboardShortcut("bacteria Ctrl + C Ctrl + V Ctrl + C Ctrl + V Ctrl + C Ctrl + V"))
