@@ -24,6 +24,7 @@ function keyboardShortcut(str) {
       i = i - 1;
     } else if (temp === "Ctrl+V"){
       arrSplit.splice(i, 3);
+      temp = "";
       i = i - 1;
     }
     else{
@@ -34,4 +35,4 @@ function keyboardShortcut(str) {
 }
 
 
-console.log(keyboardShortcut("WARNING Ctrl + V Ctrl + C Ctrl + V"))
+console.log(keyboardShortcut("You gotta copy something Ctrl + V first my Ctrl + V guy"))
