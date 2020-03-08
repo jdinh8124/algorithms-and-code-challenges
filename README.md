@@ -20,6 +20,7 @@
 - Apple
 - Uber
 - Palanti Technologies
+- Google
 
 
 ![CodeSignal Sources](Capture.PNG)
