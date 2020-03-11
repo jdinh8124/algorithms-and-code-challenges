@@ -11,6 +11,7 @@
 ## Interview Question Types
 - Arrays
 - Strings
+- jQuery
 
 ## Interview Questions From:
 - Adobe
