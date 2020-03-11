@@ -7,16 +7,6 @@ $("img.img-responsive[alt='Bravado Amber']").not(".img-responsive.mCS_img_loaded
 
 
 
-$("#thisCollection .product-element").toArray().reverse().each(function () {
-  $(this).appendTo('#thisCollection.row');
-});
-
-
-$($("#thisCollection .product-element").toArray().reverse()).each(function () {
-  $(this).appendTo('#thisCollection.row');
-});
-
-
 
 $($("#thisCollection .product-element").toArray().reverse()).each(function () {
   $(this).appendTo('#thisCollection .row');
