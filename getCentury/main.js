@@ -18,5 +18,3 @@ let num = year.toString();
     }
   }
 }
-
-console.log(century(1997))
