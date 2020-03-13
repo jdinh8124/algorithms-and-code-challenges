@@ -19,5 +19,7 @@ $($("#thisCollection .product-element").toArray().reverse()).each(function () {
 
 //Remove John Image
 // $("#John").remove()
+
+$(".container > script:nth-child(1)").insertAfter("[src='https://code.jquery.com/jquery-3.4.1.min.js']")
 //stop "Magic"
 clearInterval(JohnMagic)
