@@ -18,6 +18,6 @@ $($("#thisCollection .product-element").toArray().reverse()).each(function () {
 //Bonus
 
 //Remove John Image
-$("#John").remove()
+// $("#John").remove()
 //stop "Magic"
 clearInterval(JohnMagic)
