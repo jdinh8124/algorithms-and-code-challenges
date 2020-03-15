@@ -12,6 +12,7 @@
 - Arrays
 - Strings
 - jQuery
+- Dom manipulation 
 
 ## Interview Questions From:
 - Adobe
