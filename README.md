@@ -7,6 +7,7 @@
 - Edabit
 - CodeSignal Interview Questions
 - Codewars
+- 85 essential JS interview Questions
 
 ## Interview Question Types
 - Arrays
