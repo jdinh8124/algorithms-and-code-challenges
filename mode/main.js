@@ -2,7 +2,6 @@ function mode(nums) {
   let occur = 0;
   let arrToReturn = [];
   let current = 0;
-
   for(let i = 0; i < nums.length ; i++){
     occur = 0;
     for(let w = 0; w < nums.length; w++){
@@ -24,6 +23,3 @@ function mode(nums) {
   }
   return arrToReturn;
 }
-
-
-console.log(mode([1, 2, 2, 3, 6, 6, 7, 9]))
