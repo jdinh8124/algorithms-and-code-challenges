@@ -14,3 +14,7 @@ depth([1, [2, [3, [4]]]]) ➞ 4
 
 
 ```
+
+
+### Notes
+- This was finished with a built in array method
