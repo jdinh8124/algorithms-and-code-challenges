@@ -23,5 +23,3 @@ function highestOccurrence(arr) {
   }
   return arrToReturn;
 }
-
-console.log(highestOccurrence(["it", "keeps", "coding", "on", "or", "it", "gets", "the", "hose"]))
