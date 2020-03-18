@@ -1,4 +1,4 @@
-# Basic Statistics: Mode
+# Basic Statistics: Find Mode
 - The mode of a group of numbers is the value (or values) that occur most often (values have to occur more than once). Given a sorted array of numbers, return an array of all modes in ascending order.
 
 ## Examples
