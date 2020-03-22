@@ -21,10 +21,13 @@ function validateTheRelationships(str) {
   let factual = true;
 
   for (let i = 0; i < arrToEval.length; i++) {
-    if(parseInt(arrToEval[i]) === NaN ){
-      // if (!(parseInt(arrToEval[i - 1]) arrToEval[i] parseInt(arrToEval[i+1]))){
-      //   factual = false;
-      // }
+    if (arrToEval[i] === ">" || arrToEval[i] === "<" || arrToEval[i] === "=" || arrToEval[i] === ">=" || arrToEval[i] === "<="   ){
+      let num1 = parseInt(arrToEval[i - 1]);
+      let opp = arrToEval[i];
+      let num2 = parseInt(arrToEval[i + 1]);
+      if (!(num1 opp num2)){
+        factual = false;
+      }
     }
   }
 }
