@@ -1,7 +1,6 @@
 function validateTheRelationships(str) {
   const arrToEval = [];
   let numToPush = "";
-  debugger;
   for(let i = 0; i < str.length; i++){
     if (str[i] === ">" || str[i] === "<" || str[i] === "=" ){
       if (str[i + 1] === "=" ){
@@ -59,6 +58,3 @@ function validateTheRelationships(str) {
   }
   return factual;
 }
-
-
-console.log(validateTheRelationships("-15<-10<=0=0<5"))
