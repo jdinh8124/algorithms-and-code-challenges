@@ -1,0 +1,3 @@
+function validateTheRelationships(str) {
+
+}
