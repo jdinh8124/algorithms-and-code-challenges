@@ -1,11 +1,5 @@
 function reverseOdd(str) {
-  let arr = str.split(" ")
-  let reverseArr = arr.map(item => {
-    if (item.length % 2 != 0) {
-      return item.split("").reverse().join("")
-    }
-    return item
-  })
-  return reverseArr.join(" ");
+  const arrToReturn = [];
+  str.split(" ").map(item => item.length % 2 === 0 ? arrToReturn.push(item) : arrToReturn.push(item.split("").reverse().join("")) )
+  return arrToReturn;
 }
-console.log(reverseOdd("One two three four"))
