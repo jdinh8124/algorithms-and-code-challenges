@@ -1,11 +1,13 @@
 function reverseOdd(str) {
-  debugger;
   let arr = str.split(" ")
-  arr.forEach(item => {
-    if(!(item.length % 2)){
+  let reverseArr = arr.map(item => {
+    if(item.length % 2 == 0 ){
+      return item;
+    }else{
       return item.split("").reverse().join("")
     }
   })
+  return reverseArr;
 }
 
 
