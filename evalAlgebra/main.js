@@ -9,13 +9,21 @@ function evalAlgebra(eq) {
         return parseInt(arrEq[0]) - parseInt(arrEq[2])
       }
   }else{
-    if (arrEq[1] === "+") {
-      return parseInt(arrEq[4]) - parseInt(arrEq[0])
+    if(arrEq[0] === "x"){
+      if (arrEq[1] === "+") {
+        return parseInt(arrEq[4]) - parseInt(arrEq[2])
+      } else {
+        return parseInt(arrEq[2]) - parseInt(arrEq[4])
+      }
     }else{
-      return parseInt(arrEq[0]) - parseInt(arrEq[4])
+      if (arrEq[1] === "+") {
+        return parseInt(arrEq[4]) - parseInt(arrEq[0])
+      } else {
+        return parseInt(arrEq[0]) - parseInt(arrEq[4])
+      }
     }
   }
 }
 
 
-console.log(evalAlgebra("x + 10 = 53"))
+console.log(evalAlgebra("x - 46 = -2"))
