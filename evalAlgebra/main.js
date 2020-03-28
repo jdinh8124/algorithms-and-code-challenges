@@ -19,6 +19,9 @@ function evalAlgebra(eq) {
       if (arrEq[1] === "+") {
         return parseInt(arrEq[4]) - parseInt(arrEq[0])
       } else {
+        if (parseInt(arrEq[0]) > parseInt(arrEq[4]) ){
+          return parseInt(arrEq[0]) - parseInt(arrEq[4])
+        }
         return parseInt(arrEq[0]) + parseInt(arrEq[4])
       }
     }
