@@ -21,9 +21,3 @@ function groupSeats(arr, n) {
   })
   return numOfSeats;
 }
-
-
-console.log(groupSeats([
-  [1, 0, 1, 0, 1, 0, 1],
-  [0, 1, 0, 0, 0, 0, 0],
-], 4))
