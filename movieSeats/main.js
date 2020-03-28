@@ -1,29 +1,29 @@
 function groupSeats(arr, n) {
-  debugger;
   let numOfSeats = 0;
-  arr.forEach(item => {
-    let num = 0;
-    item.forEach(seat => {
-      if(num === n){
-
+  arr.forEach(singleArr => {
+    for(let i = 0; i < singleArr.length; i++){
+      let num = 0;
+      if(singleArr[i] === 0){
+        let w = i
+        for (let amountChecked = 0; amountChecked < n; amountChecked++) {
+          if (singleArr[i] === singleArr[w]) {
+            num++
+          } else {
+            num = 0;
+          }
+          w++
+        }
+        if (num === n) {
+          numOfSeats++;
+        }
       }
-      else if(seat === 0){
-        num++
-      }else{
-        num = 0;
-      }
-    })
-    if(num >= n){
-      numOfSeats++
     }
   })
   return numOfSeats;
 }
 
 
-console.log(groupSeats([[1, 0, 0, 0, 0, 1, 1],
-  [1, 1, 1, 0, 1, 1, 1],
+console.log(groupSeats([
   [1, 0, 1, 0, 1, 0, 1],
-  [1, 1, 0, 1, 1, 0, 1],
-  [1, 0, 1, 1, 1, 1, 1],
-  [1, 0, 1, 1, 0, 0, 0]], 4))
+  [0, 1, 0, 0, 0, 0, 0],
+], 4))
