@@ -3,20 +3,27 @@ function cleave(str, words) {
   let stringToReturn = "";
   for(let i = 0; i < str.length; i++){
     let letterPlusWord = str[i];
+    let foundWord;
+    let foundIndex;
+    let foundWordIndex;
     for(let w = i+1; w < str.length; w++){
       letterPlusWord  += str[w];
       let num = words.findIndex(word => word === letterPlusWord);
       if(num > -1){
-        if(!stringToReturn){
-          stringToReturn = words[num]
-        }else{
-          stringToReturn += " " + words[num];
-        }
-        i = w;
-        w = str.length;
+        foundWord = letterPlusWord;
+        foundIndex = w;
+        foundWordIndex = num;
       }
-      if(w === str.length -1){
-        return "Cleaving stalled: Word not found";
+
+      if(w === str.length - 1 && foundWord){
+        if (!stringToReturn) {
+          stringToReturn = words[foundWordIndex]
+        } else {
+          stringToReturn += " " + words[foundWordIndex];
+        }
+        i = foundIndex;
+      } else if (w === str.length - 1) {
+        return 'Cleaving stalled: Word not found'
       }
     }
   }
