@@ -12,7 +12,7 @@ function cleave(str, words) {
         }else{
           stringToReturn += " " + words[num];
         }
-        i = w - 1;
+        i = w;
         w = str.length;
       }
       if(w === str.length -1){
