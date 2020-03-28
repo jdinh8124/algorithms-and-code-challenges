@@ -1,5 +1,4 @@
 function evalAlgebra(eq) {
-  debugger;
   const arrEq = eq.split(" ");
   let findIndex = arrEq.findIndex(index => index === "x");
   if(findIndex === 4){
@@ -27,6 +26,3 @@ function evalAlgebra(eq) {
     }
   }
 }
-
-
-console.log(evalAlgebra("4 - x = 1"))
