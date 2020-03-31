@@ -10,3 +10,12 @@ function rootDigit(n) {
     return rootDigit(numToPush)
   }
 }
+
+
+
+// function rootDigit(n) {
+//   while (n.toString().length > 1) {
+//     n = Number(n.toString().split("").reduce((a, b) => Number(a) + Number(b), 0));
+//   }
+//   return n;
+// }
