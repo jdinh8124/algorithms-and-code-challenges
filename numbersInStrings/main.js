@@ -1,5 +1,4 @@
 function numInStr(arr) {
-  
   let arrToReturn = [];
   arr.forEach(item =>{
     let isNumber = false;
@@ -17,5 +16,6 @@ function numInStr(arr) {
 
 
 
-
-console.log(numInStr(["abc", "ab10c", "a10bc", "bcd"]))
+// function numInStr(arr) {
+//   return arr.filter(x => /[0-9]/.test(x));
+// }
