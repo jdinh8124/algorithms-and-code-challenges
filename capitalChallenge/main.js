@@ -7,15 +7,11 @@ function selectLetters(s1, s2) {
   }else{
     length = s1.length;
   }
-  for (let i = 0; i < length; i++) {
-    if (s1[i] === s1[i].toUpperCase() && isNaN(parseInt(s1[i])) ) {
-      stringToReturn += s2[i];
-    }
-  }
-
-  for (let i = 0; i < length; i++) {
-    if (s2[i] === s2[i].toUpperCase() && isNaN(parseInt(s2[i]))) {
-      stringToReturn += s1[i];
+  for(let i = 0; i < length; i++){
+    if (s1[i] === s1[i].toUpperCase() && isNaN(parseInt(s1[i]))){
+      stringToReturn += s2[i]
+    } else if (s2[i] === s2[i].toUpperCase() && isNaN(parseInt(s2[i]))){
+      stringToReturn += s1[i]
     }
   }
 
