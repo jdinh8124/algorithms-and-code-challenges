@@ -1,0 +1,3 @@
+function arrayOfMultiples(num, length) {
+
+}
