@@ -15,6 +15,7 @@
 - Strings
 - jQuery
 - Dom manipulation 
+- data structures 
 
 ## Interview Questions From:
 - Adobe
