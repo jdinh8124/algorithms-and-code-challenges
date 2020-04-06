@@ -1,0 +1,29 @@
+```
+SELECT *
+FROM employees
+ORDER by salary;
+
+SELECT *
+from employees
+WHERE year = 2011
+ORDER BY salary;
+
+SELECT *
+FROM employees
+ORDER BY last_name DESC;
+
+SELECT *
+FROM employees
+ORDER BY department,
+salary DESC;
+
+SELECT salary, position
+FROM employees
+LIMIT 5;
+
+SELECT salary, position
+FROM employees
+ORDER BY salary DESC
+LIMIT 10;
+
+```
