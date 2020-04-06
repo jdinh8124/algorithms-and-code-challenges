@@ -50,4 +50,32 @@ SELECT COUNT(DISTINCT position) AS distinct_positions
 FROM employees ;
 
 
+SELECT MAX(salary)
+FROM employees ;
+
+SELECT AVG(salary)
+FROM employees
+WHERE year = 2013;
+
+SELECT SUM(salary)
+FROM employees
+WHERE year = 2014 AND
+ department = 'Marketing';
+
+
+SELECT
+	department,
+    COUNT(first_name) AS employees_no
+FROM employees
+WHERE year = 2013
+GROUP BY department;
+
+SELECT
+	department,
+    MIN(salary),
+    MAX(salary)
+FROM employees
+WHERE year = 2014
+GROUP BY department;
+
 ```
