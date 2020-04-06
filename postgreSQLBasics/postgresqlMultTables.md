@@ -114,4 +114,13 @@ SELECT SUM(salary),
 FROM employees
 GROUP BY last_name, first_name
 ORDER BY SUM(salary) DESC;
+
+SELECT AVG(salary) AS average_salary,
+	   COUNT(DISTINCT year) AS years_worked,
+       first_name,
+       last_name
+FROM employees
+GROUP BY last_name, first_name
+HAVING COUNT(DISTINCT year) > 2
+ORDER BY AVG(salary) DESC;
 ```
