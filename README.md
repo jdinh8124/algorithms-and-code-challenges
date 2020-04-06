@@ -9,13 +9,14 @@
 - Codewars
 - leetcode
 - 85 essential JS interview Questions
+- LearnSQL.com
 
 ## Interview Question Types
 - Arrays
 - Strings
 - jQuery
-- Dom manipulation 
-- data structures 
+- Dom manipulation
+- data structures
 
 ## Interview Questions From:
 - Adobe
