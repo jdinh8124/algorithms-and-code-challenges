@@ -26,4 +26,19 @@ FROM employees
 ORDER BY salary DESC
 LIMIT 10;
 
+SELECT year
+FROM employees;
+
+SELECT DISTINCT year
+FROM employees;
+
+
+SELECT DISTINCT
+	position,
+	department
+FROM employees;
+
+SELECT COUNT(*)
+FROM employees;
+
 ```
