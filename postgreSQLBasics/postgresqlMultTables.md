@@ -41,4 +41,13 @@ FROM employees;
 SELECT COUNT(*)
 FROM employees;
 
+
+
+SELECT COUNT(position) AS non_null_no
+FROM employees ;
+
+SELECT COUNT(DISTINCT position) AS distinct_positions
+FROM employees ;
+
+
 ```
