@@ -1,10 +1,8 @@
 function climbingStairs(n) {
-  if (n === 1) {
-    return 1;
-  } else if (n === 2) {
-    return 2
+  const arrToReturn = [1, 1]
+  for (let i = 2; i < 50; i++) {
+    let numToPush = arrToReturn[i - 2] + arrToReturn[i - 1];
+    arrToReturn.push(numToPush)
   }
-
-
-
+  return arrToReturn[n]
 }
