@@ -33,4 +33,21 @@ WHERE city_id IN (
   	SELECT id
   	From city
   	WHERE area > 100);
+
+
+    SELECT *
+FROM city
+WHERE population < ALL (
+  SELECT population
+  FROM country
+);
+
+SELECT *
+FROM trip
+WHERE price = ANY (
+  SELECT price
+  FROM hiking_trip
+);
+
+
 ```
