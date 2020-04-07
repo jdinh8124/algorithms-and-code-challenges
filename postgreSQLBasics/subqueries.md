@@ -107,4 +107,38 @@ WHERE days < ANY (
   SELECT days FROM hiking_trip
   WHERE trip.price = hiking_trip.price
 );
+
+
+SELECT *
+FROM
+  mountain,
+  (
+    SELECT *
+    FROM country
+    WHERE population >= 50000
+  ) AS large_country
+WHERE large_country.id = country_id;
+
+
+SELECT
+  length,
+  height
+FROM
+  hiking_trip,
+  (
+    SELECT *
+    FROM mountain
+    WHERE height >= 3000
+  ) AS high_mountain
+WHERE high_mountain.id = hiking_trip.mountain_id;
+
+
+SELECT
+  name,
+  (
+    SELECT COUNT(*)
+    FROM hiking_trip
+    WHERE mountain.id = hiking_trip.mountain_id
+  ) AS count
+FROM mountain;
 ```
