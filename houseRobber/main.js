@@ -11,10 +11,15 @@ function houseRobber(nums) {
       nums.splice(i-1 , 2)
       i -= 3;
 
-    }else{
+    }else if(i < -1){
+      return cash;
+    }
+    else{
       nums.splice(i - 1, 3)
       i -= 4;
     }
   }
   return cash
 }
+
+console.log(houseRobber([1, 1, 1]))
