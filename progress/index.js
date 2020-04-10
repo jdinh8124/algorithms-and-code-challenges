@@ -4,6 +4,6 @@ function progressDays(arr) {
     if (arr[i] > arr[i - 1]) {
       progress++
     }
-    return progress;
   }
+  return progress;
 }
