@@ -14,3 +14,25 @@ alternatingCaps("OMG this website is awesome!") ➞ "OmG tHiS wEbSiTe Is AwEsOmE
 ## Notes
 - The first character should always be UPPERCASE.
 - Ignore spaces.
+
+
+
+
+### White Boarding notes
+```
+-Function that alternates cases AKA spongebob cases
+-Input :"Hello"
+-Output: "HeLlO"
+
+
+-First letter is always a capital
+-do not have to consider speed or memory
+
+-let stringToReturn = ""; empty string to start
+-Loop through string and check every character
+  -conditional if i = 0 === word[i].
+
+
+
+
+```
