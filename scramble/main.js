@@ -1,5 +1,4 @@
 function scrambled(word1, word2){
-  debugger;
   if(word1.length !== word2.length){
     return false;
   }
@@ -16,7 +15,6 @@ function scrambled(word1, word2){
       obj[word2[i]] =  -1;
     }
   }
-
   for (let i = 0; i < word1.length; i++) {
     if (obj[word1[i]] !== 0){
       return false
@@ -24,6 +22,3 @@ function scrambled(word1, word2){
   }
   return true;
 }
-
-
-console.log(scrambled('word', 'dorw'))
