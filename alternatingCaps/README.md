@@ -29,10 +29,17 @@ alternatingCaps("OMG this website is awesome!") ➞ "OmG tHiS wEbSiTe Is AwEsOmE
 -do not have to consider speed or memory
 
 -let stringToReturn = ""; empty string to start
+-let count = 0
 -Loop through string and check every character
-  -conditional if i = 0 === word[i].
+  -conditional if count === 0 ===  stringToReturn+= word[i].toUpperCase
+    -let count++
+   else if (word[i] === " " ) stringToReturn += " ";
+  else if count === is odd stringToReturn += word[i].toLowerCase;
+    count++
+  else count === even stringToReturn += word[i].toUpperCase;
+    count++;
 
 
-
+return stringToReturn;
 
 ```
