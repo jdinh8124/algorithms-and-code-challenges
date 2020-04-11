@@ -1,5 +1,4 @@
 function alternatingCaps(word) {
-  debugger;
   let stringToReturn = "";
   let count = 0;
   for (let i = 0; i < word.length; i++) {
@@ -18,5 +17,3 @@ function alternatingCaps(word) {
   }
   return stringToReturn;
 }
-
-console.log(alternatingCaps('hello'))
