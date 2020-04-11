@@ -28,6 +28,8 @@ alternatingCaps("OMG this website is awesome!") ➞ "OmG tHiS wEbSiTe Is AwEsOmE
 -First letter is always a capital
 -do not have to consider speed or memory
 
+NOTES
+
 -let stringToReturn = ""; empty string to start
 -let count = 0
 -Loop through string and check every character
@@ -39,8 +41,9 @@ alternatingCaps("OMG this website is awesome!") ➞ "OmG tHiS wEbSiTe Is AwEsOmE
   else count === even stringToReturn += word[i].toUpperCase;
     count++;
 
-
 return stringToReturn;
+
+PSUEDO CODE
 
 
 function alternatingCaps(word){
@@ -62,6 +65,5 @@ function alternatingCaps(word){
   }
   return stringToReturn;
 }
-
 
 ```
