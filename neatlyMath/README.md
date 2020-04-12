@@ -38,7 +38,7 @@ BRAINSTORM
 
 Psuedo Code
 - have a function thaat takes a string argument
-- initally were gonna created a variable called stringToReutrn and a variable called answer(gonna store our result of the equation)
+- initally were gonna created a variable called called answer(gonna store our result of the equation)
 -conditional to check string.split(" ")[1]
   if(string[2] === "x") we are going to multiply parseInt(string.split(" ")[0]) * parseInt(string.split(" ")[2]) store that in our answer variablle
   else if (string[2] === "+") parseInt(string.split(" ")[0]) + parseInt(string.split(" ")[2])
@@ -46,6 +46,21 @@ Psuedo Code
   else if (string[2] === "/") parseInt(string.split(" ")[0]) \ parseInt(string.split(" ")[2])
 
 return string plus " = " + answervariable;
+
+
+  function formatMath(expr) {
+    let answer;
+    if(string.split(" ")=== "+"){
+      answer =  parseInt(string.split(" ")[0]) + parseInt(string.split(" ")[2]);
+    } else if(string.split(" ")=== "-"){
+      answer =  parseInt(string.split(" ")[0]) - parseInt(string.split(" ")[2]);
+    }  else if(string.split(" ")=== "x"){
+      answer =  parseInt(string.split(" ")[0]) * parseInt(string.split(" ")[2]);
+    } else{
+      answer =  parseInt(string.split(" ")[0]) / parseInt(string.split(" ")[2]);
+    }
+return expr + " = " answer;
+}
 
 
 ```
