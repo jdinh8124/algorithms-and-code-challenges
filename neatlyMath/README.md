@@ -47,20 +47,20 @@ Psuedo Code
 
 return string plus " = " + answervariable;
 
-
-  function formatMath(expr) {
+  function formatMath(string) {
     let answer;
-    if(string.split(" ")=== "+"){
+    if(string.split(" ")[1]=== "+"){
       answer =  parseInt(string.split(" ")[0]) + parseInt(string.split(" ")[2]);
-    } else if(string.split(" ")=== "-"){
+    } else if(string.split(" ")[1] === "-"){
       answer =  parseInt(string.split(" ")[0]) - parseInt(string.split(" ")[2]);
-    }  else if(string.split(" ")=== "x"){
+    }  else if(string.split(" ")[1] === "x"){
       answer =  parseInt(string.split(" ")[0]) * parseInt(string.split(" ")[2]);
     } else{
       answer =  parseInt(string.split(" ")[0]) / parseInt(string.split(" ")[2]);
     }
-return expr + " = " answer;
+return string + " = " + answer;
 }
+
 
 
 ```
