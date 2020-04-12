@@ -22,3 +22,6 @@ function formatMath(string) {
   }
   return string + " = " + answer;
 }
+
+
+const formatMath = expr => `${expr} = ${eval(expr.replace(/x/, '*'))}`;
