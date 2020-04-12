@@ -17,6 +17,7 @@
 - jQuery
 - Dom manipulation
 - data structures
+- SQL queries
 
 ## Interview Questions From:
 - Adobe
