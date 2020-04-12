@@ -36,10 +36,16 @@ BRAINSTORM
 -Eventually were gonna take the original string append "=" plus the answer we did from the work
 
 
+Psuedo Code
+- have a function thaat takes a string argument
+- initally were gonna created a variable called stringToReutrn and a variable called answer(gonna store our result of the equation)
+-conditional to check string.split(" ")[1]
+  if(string[2] === "x") we are going to multiply parseInt(string.split(" ")[0]) * parseInt(string.split(" ")[2]) store that in our answer variablle
+  else if (string[2] === "+") parseInt(string.split(" ")[0]) + parseInt(string.split(" ")[2])
+  else if (string[2] === "-") parseInt(string.split(" ")[0]) - parseInt(string.split(" ")[2])
+  else if (string[2] === "/") parseInt(string.split(" ")[0]) \ parseInt(string.split(" ")[2])
 
-
-
-
+return string plus " = " + answervariable;
 
 
 ```
