@@ -1,12 +1,8 @@
 function pi(n) {
-  debugger;
 let stringToReturn = "";
-for(let i = 0; i < n; i++){
+for(let i = 0; i < n + 2; i++){
   let pi = Math.PI + "";
-  stringToReturn += pi[0]
+  stringToReturn += pi[i]
 }
 return stringToReturn
 }
-
-
-console.log(pi(10))
