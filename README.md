@@ -18,6 +18,7 @@
 - Dom manipulation
 - data structures
 - SQL queries
+- React lifecycle
 
 ## Interview Questions From:
 - Adobe
