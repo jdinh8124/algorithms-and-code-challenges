@@ -6,3 +6,9 @@ function toArray(obj) {
   }
   return arrToReturn;
 }
+
+
+
+function toArray(obj) {
+  return Object.entries(obj);
+}
