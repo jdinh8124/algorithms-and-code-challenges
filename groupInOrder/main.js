@@ -1,9 +1,13 @@
 function group(arr, size) {
   const arrToReturn = [];
-  for(let i = 0; i < size; i++){
+  let numOfArrs = Math.ceil(arr.length / size);
+  for(let i = 0; i < numOfArrs; i++){
     arrToReturn.push([]);
   }
-
+  let arrNumToPush = 0;
+  for(let i = 0; i < arr.length; i++){
+    arrToReturn[arrNumToPush].push(arr[i])
+  }
 }
 
 
