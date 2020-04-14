@@ -5,7 +5,7 @@ function getHashTags(str) {
   }
   )
   for (let i = 0; i < 3; i++) {
-    if (spitarr.length > i) {
+    if (splitarr.length > i) {
       arrToReturn.push("#" + splitarr[i].toLowerCase())
     }
   }
