@@ -1,6 +1,12 @@
 function getHashTags(str) {
+  let newString = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== "," || str[i] !== "?") {
+      newString += str[i];
+    }
+  }
   let arrToReturn = [];
-  const splitarr = str.split(" ").sort(function (a, b) {
+  const splitarr = newString.split(" ").sort(function (a, b) {
     return b.length - a.length
   }
   )
