@@ -1,7 +1,8 @@
 function getHashTags(str) {
+  debugger;
   let newString = "";
   for (let i = 0; i < str.length; i++) {
-    if (str[i] !== "," || str[i] !== "?") {
+    if (str[i] !== "," && str[i] !== "?") {
       newString += str[i];
     }
   }
@@ -17,3 +18,7 @@ function getHashTags(str) {
   }
   return arrToReturn;
 }
+
+
+
+console.log(getHashTags("Are You an Elite Entrepreneur?"))
