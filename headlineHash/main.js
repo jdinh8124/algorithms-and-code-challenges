@@ -1,0 +1,3 @@
+function getHashTags(str) {
+
+}
