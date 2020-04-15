@@ -19,6 +19,7 @@
 - data structures
 - SQL queries
 - React lifecycle
+- Skill IQ Questions
 
 ## Interview Questions From:
 - Adobe
