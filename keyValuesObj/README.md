@@ -45,3 +45,12 @@ objectToArray({
 - In each iteration we are going to create a new array with key at index zero, value at index one
 - we are going to push into the arrayToReturn
 - when the for in loop finishes we are going to return arrayToReturn
+
+function objectToArray(object){
+  const arrToReturn = [];
+  for(let key in object){
+      let arrToPush = [key , object[key]];
+      arrToReturn.push(arrToPush);
+  }
+  return arrToReturn;
+}
