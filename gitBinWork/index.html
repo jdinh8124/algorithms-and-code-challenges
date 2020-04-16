@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <style>
+    #displayArea {
+      height: 50vh;
+      width: 50vw;
+      background-color: pink;
+      position: absolute;
+
+    }
+
+    #displayArea>span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</head>
+
+<body>
+  <div id="displayArea">
+    <span>0</span>
+  </div>
+</body>
+<script type="text/javascript">
+  /* link to how the app should behave when you get it to work:
+  http://youtu.be/TtMHhqrYf90
+  */
+  var counter = 0;
+  var timerID = null;
+  $("#displayArea").on('click', increaseCounter);
+  $("#displayArea").on('mouseout', handleMouseout);
+  $("#displayArea").on('mouseover', handleMouseover);
+  function increaseCounter() {
+    counter += 1;
+    updateDisplay();
+    return;
+  }
+  function decreaseCounter() {
+    if (counter <= 0) {
+      handleMouseover();
+      counter = 0;
+      return;
+    }
+    counter -= 1;
+    updateDisplay();
+  }
+  function updateDisplay() {
+    $("#displayArea > span").text(counter);
+  }
+  function handleMouseout() {
+    timerID = setInterval(decreaseCounter, 500);
+
+  }
+  function handleMouseover() {
+    clearTimeout(timerID);
+  }
+</script>
+
+</html>
