@@ -32,7 +32,3 @@ function majorityVote(arr) {
     return highest
   }
 }
-
-
-
-console.log(majorityVote(["B", "B", "B"]))
