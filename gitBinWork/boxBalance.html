@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="description" content="practice project">
+  <title></title>
+  <style type="text/css">
+    div {
+      height: 20vh;
+      width: 20vh;
+      text-align: center;
+      line-height: 20vh;
+    }
+
+    #container1 {
+      background-color: lavender;
+    }
+
+    #container2 {
+      background-color: hotpink
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+
+<body>
+  <div id="container1">20</div>
+  <div id="container2">5</div>
+  <script type="text/javascript">
+    /*
+    when the a div is clicked
+        get the number from my div (the one that was clicked)
+        subtract 1 from that number
+        put the number back into the div
+        get the number from the other div
+        convert numberic string to a number
+        add 1 to that number
+        put the number back into the div
+
+
+    */
+    $("#container1").click(function () {
+      var divNumberToSubtract1 = parseInt($('#container1').text());;
+      divNumberToSubtract1 -= 1;
+
+      var divNumberToAdd1 = parseInt($('#container2').text());;
+      divNumberToAdd1 += 1;
+
+      $("#container1").text(divNumberToSubtract1);
+      $("#container2").text(divNumberToAdd1);
+    });
+
+    $("#container2").click(function () {
+      var divNumberToSubtract2 = parseInt($('#container2').text());;
+      divNumberToSubtract2 -= 1;
+
+      var divNumberToAdd2 = parseInt($('#container1').text());;
+      divNumberToAdd2 += 1;
+
+      $("#container2").text(divNumberToSubtract2);
+      $("#container1").text(divNumberToAdd2);
+    });
+
+
+  </script>
+</body>
+
+</html>
