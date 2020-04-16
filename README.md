@@ -10,6 +10,7 @@
 - leetcode
 - 85 essential JS interview Questions
 - LearnSQL.com
+- SkillIQ.com
 
 ## Interview Question Types
 - Arrays
