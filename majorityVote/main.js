@@ -1,4 +1,5 @@
 function majorityVote(arr) {
+  debugger
   arr.sort();
   let highest;
   let highestTimes = 0;
@@ -10,6 +11,10 @@ function majorityVote(arr) {
       occurance = arr[i]
     }else if (arr[i] === occurance){
       occuranceTimes++
+      if(i === arr.length - 1){
+        highestTimes = occuranceTimes;
+        highest = occurance;
+      }
     }else{
       if (occuranceTimes > highestTimes){
         highestTimes = occuranceTimes;
@@ -19,9 +24,14 @@ function majorityVote(arr) {
       occuranceTimes = 1;
     }
   }
-  if(arr.length / 2 > highestTimes){
+  if(arr.length / 2 >= highestTimes){
     return null;
   }else{
-    return highestTimes
+    return highest
   }
 }
+
+
+
+
+console.log(majorityVote(["B", "B", "B"]))
