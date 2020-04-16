@@ -31,3 +31,8 @@ objectToArray({
 - output : ["D", 1], ["B", 2], ["C", 3]
 
 -Speical cases : none
+
+
+-for in loop
+- array to return with array of keys an values
+- for in loop variables to push to the array to return
