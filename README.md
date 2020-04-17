@@ -36,3 +36,5 @@
 ![CodeSignal Sources](Capture.PNG)
 
 ![Edabit Sources](edabit.PNG)
+
+![Skill Assessments](picture2.PNG)
