@@ -1,5 +1,5 @@
 const filterUnique = arr =>
-  arr.filter(x => new Set(x).size == x.length);
+  arr.filter(item => new Set(item).size == item.length);
 
 
 
