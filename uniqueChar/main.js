@@ -4,3 +4,4 @@ const filterUnique = arr =>
 
 
   // creates new object with unique values
+  // compares the length of new object with the value of the filtered item
