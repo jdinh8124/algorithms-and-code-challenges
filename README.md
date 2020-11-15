@@ -1,7 +1,7 @@
 # algorithms-and-code-challenges
 
 ## About
-- This repository was created to help me continue to grow and improve on my JavaScript, jQuery, and analytical skills everyday.
+- This repository was created to help me continue to grow and improve on my data structures, programming, JavaScript/typescript, and analytical skills everyday.
 - Below are a variety of code challenges, SQL query practice, and interview coding questions I have faced in real life interviews
 
 
