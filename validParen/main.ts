@@ -1,21 +1,25 @@
 function isValid(s: string): boolean {
-    const stack = [s[0]];
-    
-    for (let i = 1; i < s.length; i++) {
-        if (stack.length) {
-            if (s[i] === ']' || s[i] === ')' || s[i] === '}') {
-                if (stack[stack.length - 1])
-            } else {
-                if (s[i] === '[' || s[i] === '(' || s[i] === '{') {
-                    stack.push(s[i])
-                } else {
-                    return false;
-                }
-            }
-        } else if (s[i] === '[' || s[i] === '(' || s[i] === '{') {
+    const stack = [];
+    const openMap = new Map([
+        ['(', ')'],
+        ['[', ']'],
+        ['{', '}'],
+      ]);
+      const closeMap = new Map([
+        [')', '('],
+        [']', '['],
+        ['}', '{'],
+      ]);
+
+    for (let i = 0; i < s.length; i++) {
+        if (openMap.get(s[i])) {
             stack.push(s[i])
         } else {
-            return false;
+            let popped = stack.pop();
+
+            if (popped !== closeMap.get(s[i])) {
+                return false 
+            }
         }
     }
         
