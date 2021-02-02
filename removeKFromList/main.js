@@ -1,16 +1,27 @@
+// Singly-linked lists are already defined with this interface:
+// function ListNode(x) {
+//   this.value = x;
+//   this.next = null;
+// }
 //
 function removeKFromList(l, k) {
-  debugger;
-  if (l.length < 1) {
-    return l;
-  }
-  for (let i = 0; i < l.length; i++) {
-    if (l[i] === k) {
-      l.splice(i, 1);
-      i--
-    }
+  let previous;
+  let valuetoCheck = l;
+  while(valuetoCheck !== null) {
+      if (valuetoCheck.value === k) {
+          if (previous) {
+              previous.next = valuetoCheck.next 
+              previous = valuetoCheck;
+              valuetoCheck = valuetoCheck.next;
+
+          } else {
+              l = valuetoCheck.next;
+              valuetoCheck = l;
+          }
+      } else {
+          previous = valuetoCheck;
+          valuetoCheck = valuetoCheck.next;   
+      }
   }
   return l;
 }
-
-console.log(removeKFromList([], 3))
