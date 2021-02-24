@@ -7,3 +7,8 @@ $ everyOther(‘xxyxxy’)
 $ 2 // str becomes ‘xyxy’
 
 ```
+
+### Notes
+- loop through string and slice any index where the current letter matches the previous letter
+- initialize with a count of how many letters are split 
+- 
